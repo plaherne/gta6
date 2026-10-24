@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTA VI — Official Release Countdown | Nov 19, 2026</title>
+    <!-- Open Graph Meta Tags for WhatsApp Link Previews -->
+    <meta property="og:title" content="GTA VI Live Countdown — November 19, 2026" />
+    <meta property="og:description" content="Return to Vice City. Watch the real-time countdown to Grand Theft Auto VI on November 19, 2026 at Midnight." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#ff2a85" />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        display: ['"Bebas Neue"', 'sans-serif'],
+                        script: ['"Permanent Marker"', 'cursive'],
+                        mono: ['"JetBrains Mono"', 'monospace'],
+                        sans: ['"Inter"', 'sans-serif'],
+                    },
+                    colors: {
+                        vice: {
+                            pink: '#ff2a85',
+                            magenta: '#d900ff',
+                            orange: '#ff7b00',
+                            gold: '#ffbe0b',
+                            cyan: '#00f5d4',
+                            blue: '#00bbf9',
+                            dark: '#0b0316',
+                            card: '#160829',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        :root {
+            --neon-pink: #ff2a85;
+            --neon-cyan: #00f5d4;
+            --neon-orange: #ff7b00;
+        }
+
+        body {
+            background-color: #090214;
+            color: #ffffff;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Vice City Sky & Sunset Gradient */
+        .vice-sky {
+            background: radial-gradient(circle at 50% 32%, 
+                rgba(255, 123, 0, 0.35) 0%, 
+                rgba(255, 42, 133, 0.28) 28%, 
+                rgba(114, 9, 183, 0.22) 55%, 
+                rgba(9, 2, 20, 0.98) 85%),
+                linear-gradient(180deg, #0c021c 0%, #24063b 42%, #4a0e4e 68%, #090214 100%);
+        }
+
+        /* Animated Synthwave Perspective Grid */
+        .synth-grid-container {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 42vh;
+            perspective: 350px;
+            overflow: hidden;
+            z-index: 0;
+            pointer-events: none;
+            mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 15%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0.9) 15%, rgba(0,0,0,0) 100%);
+        }
+
+        .synth-grid {
+            position: absolute;
+            inset: -100% -50%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 42, 133, 0.32) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 245, 212, 0.28) 1px, transparent 1px);
+            background-size: 50px 50px;
+            transform: rotateX(68deg);
+            animation: gridMove 3.5s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: rotateX(68deg) translateY(0); }
+            100% { transform: rotateX(68deg) translateY(50px); }
+        }
+
+        /* Retro Segmented Sunset Sun */
+        .retro-sun {
+            width: 280px;
+            height: 280px;
+            border-radius: 50%;
+            background: linear-gradient(180deg, #ffea00 0%, #ff7b00 45%, #ff006e 85%, #8338ec 100%);
+            box-shadow: 0 0 80px rgba(255, 42, 133, 0.65), 0 0 140px rgba(255, 123, 0, 0.4);
+            -webkit-mask-image: linear-gradient(
+                to bottom,
+                #000 0%, #000 50%,
+                transparent 50%, transparent 53%,
+                #000 53%, #000 62%,
+                transparent 62%, transparent 66%,
+                #000 66%, #000 73%,
+                transparent 73%, transparent 78%,
+                #000 78%, #000 84%,
+                transparent 84%, transparent 90%,
+                #000 90%, #000 95%,
+                transparent 95%, transparent 100%
+            );
+            mask-image: linear-gradient(
+                to bottom,
+                #000 0%, #000 50%,
+                transparent 50%, transparent 53%,
+                #000 53%, #000 62%,
+                transparent 62%, transparent 66%,
+                #000 66%, #000 73%,
+                transparent 73%, transparent 78%,
+                #000 78%, #000 84%,
+                transparent 84%, transparent 90%,
+                #000 90%, #000 95%,
+                transparent 95%, transparent 100%
+            );
+        }
+
+        /* Glowing Text & Card Effects */
+        .neon-text-pink {
+            text-shadow: 0 0 12px rgba(255, 42, 133, 0.8), 0 0 32px rgba(255, 42, 133, 0.45);
+        }
+
+        .neon-text-cyan {
+            text-shadow: 0 0 10px rgba(0, 245, 212, 0.85), 0 0 25px rgba(0, 245, 212, 0.4);
+        }
+
+        .vi-gradient-text {
+            background: linear-gradient(180deg, #fff5d6 0%, #ff9e00 35%, #ff2a85 75%, #b5179e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 4px 24px rgba(255, 42, 133, 0.65));
+        }
+
+        .countdown-card {
+            background: linear-gradient(165deg, rgba(32, 11, 58, 0.85) 0%, rgba(14, 4, 28, 0.92) 100%);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 42, 133, 0.35);
+            box-shadow: 0 12px 35px -5px rgba(0, 0, 0, 0.7), 
+                        0 0 25px rgba(255, 42, 133, 0.15),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.18);
+            transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .countdown-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(0, 245, 212, 0.6);
+            box-shadow: 0 16px 40px -5px rgba(0, 0, 0, 0.8), 
+                        0 0 30px rgba(0, 245, 212, 0.25),
+                        inset 0 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        .glass-panel {
+            background: rgba(20, 7, 38, 0.78);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        /* Shimmering Progress Bar */
+        .progress-bar-fill {
+            background: linear-gradient(90deg, #ff7b00 0%, #ff2a85 50%, #00f5d4 100%);
+            background-size: 200% 100%;
+            animation: shimmerGradient 3s linear infinite;
+            box-shadow: 0 0 16px rgba(255, 42, 133, 0.8);
+        }
+
+        @keyframes shimmerGradient {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 200% 50%; }
+        }
+
+        /* WhatsApp Button Pulse */
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+            box-shadow: 0 0 25px rgba(37, 211, 102, 0.45), 0 8px 20px rgba(0, 0, 0, 0.4);
+            transition: all 0.25s ease;
+        }
+
+        .whatsapp-btn:hover {
+            transform: translateY(-2px) scale(1.01);
+            box-shadow: 0 0 35px rgba(37, 211, 102, 0.75), 0 12px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .whatsapp-btn:active {
+            transform: translateY(0) scale(0.99);
+        }
+
+        /* Digit tick animation */
+        .digit-pulse {
+            animation: tickScale 0.22s ease-out;
+        }
+
+        @keyframes tickScale {
+            0% { transform: scale(1.06); color: #00f5d4; }
+            100% { transform: scale(1); }
+        }
+
+        /* Floating Palm Sway */
+        .palm-left {
+            transform-origin: bottom left;
+            animation: swayLeft 7s ease-in-out infinite alternate;
+        }
+        .palm-right {
+            transform-origin: bottom right;
+            animation: swayRight 8s ease-in-out infinite alternate;
+        }
+        @keyframes swayLeft {
+            0% { transform: rotate(-1.5deg); }
+            100% { transform: rotate(2deg); }
+        }
+        @keyframes swayRight {
+            0% { transform: rotate(1.5deg) scaleX(-1); }
+            100% { transform: rotate(-2deg) scaleX(-1); }
+        }
+    </style>
+</head>
+<body class="vice-sky min-h-screen flex flex-col justify-between relative selection:bg-vice-pink selection:text-white">
+
+    <!-- Animated Synthwave Horizon Grid -->
+    <div class="synth-grid-container" aria-hidden="true">
+        <div class="synth-grid"></div>
+    </div>
+
+    <!-- Retro Glowing Sun in Background -->
+    <div class="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 pointer-events-none z-0 opacity-65 flex items-center justify-center" aria-hidden="true">
+        <div class="retro-sun"></div>
+    </div>
+
+    <!-- Palm Tree Silhouettes (Left & Right) -->
+    <svg class="palm-left fixed -bottom-6 -left-12 w-64 sm:w-80 md:w-96 h-auto text-[#07010f] opacity-85 pointer-events-none z-0" viewBox="0 0 300 400" fill="currentColor" aria-hidden="true">
+        <path d="M40,400 C55,310 85,220 135,140 C145,142 152,145 152,145 C108,225 82,315 72,400 Z" />
+        <path d="M142,143 C105,105 45,95 5,115 C45,115 95,125 138,148 Z" />
+        <path d="M144,140 C95,80 30,50 -15,60 C35,70 90,100 138,145 Z" />
+        <path d="M145,140 C120,75 75,25 25,15 C70,40 110,85 142,142 Z" />
+        <path d="M146,142 C165,75 215,35 270,35 C220,55 180,95 148,144 Z" />
+        <path d="M148,144 C195,100 250,90 295,110 C245,110 195,122 150,147 Z" />
+        <path d="M148,147 C195,130 245,145 280,180 C235,158 190,150 147,150 Z" />
+        <path d="M142,147 C95,140 50,165 20,205 C60,178 105,160 144,150 Z" />
+    </svg>
+
+    <svg class="palm-right fixed -bottom-6 -right-12 w-64 sm:w-80 md:w-96 h-auto text-[#07010f] opacity-85 pointer-events-none z-0" viewBox="0 0 300 400" fill="currentColor" aria-hidden="true">
+        <path d="M40,400 C55,310 85,220 135,140 C145,142 152,145 152,145 C108,225 82,315 72,400 Z" />
+        <path d="M142,143 C105,105 45,95 5,115 C45,115 95,125 138,148 Z" />
+        <path d="M144,140 C95,80 30,50 -15,60 C35,70 90,100 138,145 Z" />
+        <path d="M145,140 C120,75 75,25 25,15 C70,40 110,85 142,142 Z" />
+        <path d="M146,142 C165,75 215,35 270,35 C220,55 180,95 148,144 Z" />
+        <path d="M148,144 C195,100 250,90 295,110 C245,110 195,122 150,147 Z" />
+        <path d="M148,147 C195,130 245,145 280,180 C235,158 190,150 147,150 Z" />
+        <path d="M142,147 C95,140 50,165 20,205 C60,178 105,160 144,150 Z" />
+    </svg>
+
+    <!-- Top Navigation / Status Bar -->
+    <header class="relative z-10 w-full max-w-6xl mx-auto px-4 sm:px-6 pt-5 pb-2 flex flex-wrap items-center justify-between gap-3">
+        <div class="flex items-center gap-2.5">
+            <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-vice-cyan opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-vice-cyan"></span>
+            </span>
+            <span class="text-xs sm:text-sm font-mono uppercase tracking-widest text-vice-cyan font-semibold">
+                LEONIDA BROADCAST // LIVE SYNC
+            </span>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+            <!-- Synth Audio Vibe Button -->
+            <button id="audioToggleBtn" onclick="toggleSynthDrone()" class="glass-panel hover:border-vice-pink/60 text-xs font-mono px-3 py-1.5 rounded-full flex items-center gap-2 transition-all text-pink-200 hover:text-white">
+                <svg id="audioIconOff" class="w-4 h-4 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
+                </svg>
+                <svg id="audioIconOn" class="w-4 h-4 text-vice-cyan hidden animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
+                </svg>
+                <span id="audioLabel">Synth SFX: OFF</span>
+            </button>
+
+            <!-- Quick Copy Link Pill -->
+            <button onclick="copyShareMessage()" class="glass-panel hover:border-vice-cyan/60 text-xs font-mono px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all text-cyan-200 hover:text-white">
+                <svg class="w-3.5 h-3.5 text-vice-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
+                </svg>
+                <span>Copy Link</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="relative z-10 flex-grow flex flex-col items-center justify-center w-full max-w-5xl mx-auto px-4 sm:px-6 py-4 sm:py-8">
+
+        <!-- Hero Title Emblem -->
+        <div class="text-center mb-5 sm:mb-7 relative">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-vice-pink/15 border border-vice-pink/40 text-vice-pink text-xs sm:text-sm font-semibold tracking-wider uppercase mb-3 shadow-lg">
+                <span>🌴 Welcome to Leonida</span>
+                <span class="text-white/40">•</span>
+                <span class="text-vice-gold">Thursday, Nov 19, 2026</span>
+            </div>
+
+            <div class="relative flex flex-col items-center justify-center">
+                <h2 class="font-display text-3xl sm:text-5xl md:text-6xl tracking-[0.18em] text-white uppercase drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
+                    GRAND THEFT AUTO
+                </h2>
+                <div class="relative -mt-3 sm:-mt-5 flex items-center justify-center">
+                    <h1 class="font-display text-7xl sm:text-9xl md:text-[10.5rem] leading-none tracking-tight vi-gradient-text select-none">
+                        VI
+                    </h1>
+                    <span class="font-script text-xl sm:text-3xl md:text-4xl text-vice-cyan neon-text-cyan absolute -bottom-1 sm:bottom-2 -rotate-6 select-none pointer-events-none">
+                        Vice City
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timezone Selector Bar -->
+        <div class="w-full max-w-2xl mb-6">
+            <div class="glass-panel p-1.5 rounded-2xl flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 shadow-xl">
+                <button onclick="setTimezone('LOCAL')" id="tz-LOCAL" class="tz-btn flex-1 min-w-[115px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md">
+                    📍 Local Midnight
+                </button>
+                <button onclick="setTimezone('GMT')" id="tz-GMT" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                    🇮🇪🇬🇧 GMT / Dublin
+                </button>
+                <button onclick="setTimezone('EST')" id="tz-EST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                    🌴 EST / Miami
+                </button>
+                <button onclick="setTimezone('PST')" id="tz-PST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                    🎬 PST / L.A.
+                </button>
+            </div>
+            <p id="activeTimezoneSubtext" class="text-center text-xs font-mono text-pink-200/75 mt-2">
+                Counting down to: Thursday, Nov 19, 2026 at 00:00:00 (Your Local Time)
+            </p>
+        </div>
+
+        <!-- Real-Time Countdown Grid -->
+        <div class="w-full grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5 mb-5" role="timer" aria-live="polite">
+            <!-- DAYS -->
+            <div class="countdown-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-vice-orange via-vice-pink to-vice-cyan opacity-80"></div>
+                <span id="days" class="font-mono font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight text-white neon-text-pink tabular-nums">
+                    00
+                </span>
+                <span class="font-display tracking-[0.22em] text-sm sm:text-lg text-vice-cyan uppercase mt-1 sm:mt-2">
+                    Days
+                </span>
+                <span id="weeksSub" class="text-[11px] font-mono text-pink-200/60 mt-0.5">
+                    0.0 weeks
+                </span>
+            </div>
+
+            <!-- HOURS -->
+            <div class="countdown-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-vice-pink to-vice-cyan opacity-80"></div>
+                <span id="hours" class="font-mono font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight text-white neon-text-pink tabular-nums">
+                    00
+                </span>
+                <span class="font-display tracking-[0.22em] text-sm sm:text-lg text-vice-cyan uppercase mt-1 sm:mt-2">
+                    Hours
+                </span>
+                <span id="totalHoursSub" class="text-[11px] font-mono text-pink-200/60 mt-0.5">
+                    0 total hrs
+                </span>
+            </div>
+
+            <!-- MINUTES -->
+            <div class="countdown-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-vice-cyan to-vice-pink opacity-80"></div>
+                <span id="minutes" class="font-mono font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight text-white neon-text-pink tabular-nums">
+                    00
+                </span>
+                <span class="font-display tracking-[0.22em] text-sm sm:text-lg text-vice-cyan uppercase mt-1 sm:mt-2">
+                    Minutes
+                </span>
+                <span id="totalMinutesSub" class="text-[11px] font-mono text-pink-200/60 mt-0.5">
+                    0 total mins
+                </span>
+            </div>
+
+            <!-- SECONDS & MILLISECONDS -->
+            <div class="countdown-card rounded-2xl sm:rounded-3xl p-4 sm:p-6 flex flex-col items-center justify-center relative overflow-hidden group">
+                <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-vice-cyan via-vice-gold to-vice-pink opacity-90"></div>
+                <div class="flex items-baseline justify-center">
+                    <span id="seconds" class="font-mono font-extrabold text-5xl sm:text-6xl md:text-7xl tracking-tight text-vice-cyan neon-text-cyan tabular-nums">
+                        00
+                    </span>
+                    <span id="milliseconds" class="font-mono font-bold text-lg sm:text-xl text-vice-pink ml-1 tabular-nums w-9 text-left">
+                        .00
+                    </span>
+                </div>
+                <span class="font-display tracking-[0.22em] text-sm sm:text-lg text-vice-cyan uppercase mt-1 sm:mt-2">
+                    Seconds
+                </span>
+                <span class="text-[11px] font-mono text-emerald-300/80 mt-0.5 flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> Real-time
+                </span>
+            </div>
+        </div>
+
+        <!-- Millisecond & Wait Progress Bar -->
+        <div class="w-full glass-panel rounded-2xl p-4 sm:p-5 mb-6 shadow-xl">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+                <div class="flex items-center gap-2">
+                    <span class="text-xs sm:text-sm font-semibold text-white uppercase tracking-wider flex items-center gap-1.5">
+                        <svg class="w-4 h-4 text-vice-pink" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd" />
+                        </svg>
+                        Countdown Completion (Since Trailer 1)
+                    </span>
+                </div>
+                <span id="progressPercentage" class="font-mono text-xs sm:text-sm font-bold text-vice-cyan">
+                    00.00000%
+                </span>
+            </div>
+
+            <!-- Overall Progress Track -->
+            <div class="w-full h-3.5 bg-black/60 rounded-full overflow-hidden p-0.5 border border-white/10">
+                <div id="progressBar" class="progress-bar-fill h-full rounded-full transition-all duration-100" style="width: 95%;"></div>
+            </div>
+
+            <!-- Sub-bar: Smooth Second Pulse Bar -->
+            <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono text-pink-200/70">
+                <span>DEC 5, 2023 (TRAILER 1)</span>
+                <span id="exactSecondsRemaining" class="text-vice-gold font-semibold">0,000,000 SECONDS LEFT</span>
+                <span>NOV 19, 2026 (LAUNCH)</span>
+            </div>
+        </div>
+
+        <!-- WhatsApp & Social Sharing Hub -->
+        <div class="w-full glass-panel rounded-3xl p-5 sm:p-6 mb-6 border border-vice-pink/30 shadow-2xl">
+            <div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
+                
+                <!-- Left Info & Message Style Selector -->
+                <div class="flex-1">
+                    <div class="flex items-center gap-2 mb-1">
+                        <span class="px-2 py-0.5 text-[10px] font-mono uppercase font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/40 rounded-md">
+                            WhatsApp Ready
+                        </span>
+                        <h3 class="text-base sm:text-lg font-bold text-white">
+                            Share Live Countdown with the Squad
+                        </h3>
+                    </div>
+                    <p class="text-xs sm:text-sm text-pink-100/75 mb-3">
+                        Sends the exact live time remaining right now + a clickable link to this live countdown timer.
+                    </p>
+
+                    <!-- Preset Vibe Selector -->
+                    <div class="flex flex-wrap items-center gap-1.5">
+                        <span class="text-xs font-mono text-pink-200/70 mr-1">Message Style:</span>
+                        <button onclick="setShareTemplate('hype')" id="tpl-hype" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all">
+                            🔥 Squad Hype
+                        </button>
+                        <button onclick="setShareTemplate('pto')" id="tpl-pto" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all">
+                            📅 Book PTO Alert
+                        </button>
+                        <button onclick="setShareTemplate('minimal')" id="tpl-minimal" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all">
+                            ⚡ Clean & Short
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Action Buttons: Share on WhatsApp & Copy -->
+                <div class="flex flex-col sm:flex-row md:flex-col lg:flex-row items-stretch sm:items-center gap-3 shrink-0">
+                    <!-- Prominent Emerald WhatsApp Button -->
+                    <button onclick="shareOnWhatsApp()" class="whatsapp-btn text-white font-bold px-6 py-3.5 rounded-2xl flex items-center justify-center gap-3 text-sm sm:text-base cursor-pointer">
+                        <!-- Official WhatsApp SVG Icon -->
+                        <svg class="w-6 h-6 fill-current shrink-0" viewBox="0 0 24 24">
+                            <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.126.556 4.124 1.529 5.856l-1.529 5.582 5.714-1.499c1.689.918 3.623 1.441 5.68 1.441 6.627 0 12-5.373 12-12 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        <span>Share on WhatsApp</span>
+                    </button>
+
+                    <!-- Copy Shareable Message & Link Button -->
+                    <button onclick="copyShareMessage()" class="bg-white/10 hover:bg-white/15 border border-white/20 hover:border-vice-cyan text-white font-semibold px-5 py-3.5 rounded-2xl flex items-center justify-center gap-2.5 text-sm sm:text-base transition-all cursor-pointer">
+                        <svg class="w-5 h-5 text-vice-cyan shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+                        </svg>
+                        <span>Copy Message & Link</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Live WhatsApp Message Bubble Preview -->
+            <div class="mt-4 pt-4 border-t border-white/10">
+                <div class="flex items-center justify-between mb-1.5">
+                    <span class="text-[11px] font-mono uppercase tracking-wider text-emerald-300/90 flex items-center gap-1.5">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                        Live WhatsApp Message Preview
+                    </span>
+                    <button onclick="toggleCustomUrlInput()" class="text-[11px] font-mono text-vice-cyan hover:underline">
+                        Customize Share Link URL
+                    </button>
+                </div>
+
+                <!-- Optional Custom Link Input (if user wants to paste a custom hosted URL) -->
+                <div id="customUrlBox" class="hidden mb-3">
+                    <label class="block text-xs text-pink-200/80 mb-1">Custom URL to include in WhatsApp message (defaults to current page link):</label>
+                    <input type="url" id="customShareUrl" placeholder="https://your-custom-link.com" oninput="updateLiveWhatsAppPreview()" class="w-full bg-black/50 border border-vice-pink/40 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-vice-cyan">
+                </div>
+
+                <div class="bg-[#0b141a]/90 border border-emerald-500/30 rounded-2xl p-3.5 relative font-sans text-xs sm:text-sm text-gray-100 shadow-inner">
+                    <div class="bg-[#005c4b] text-white p-3 rounded-xl rounded-tl-none inline-block max-w-full shadow">
+                        <p id="whatsappPreviewText" class="whitespace-pre-line leading-relaxed break-words"></p>
+                        <div class="text-[10px] text-emerald-200/75 text-right mt-1 flex items-center justify-end gap-1">
+                            <span id="previewTime">21:55</span>
+                            <svg class="w-3.5 h-3.5 text-sky-300 inline" fill="currentColor" viewBox="0 0 16 15">
+                                <path d="M15.01 3.316l-.478-.372a.365.365 0 0 0-.51.063L8.666 9.879a.32.32 0 0 1-.484.033l-.358-.325a.319.319 0 0 0-.484.032l-.378.483a.418.418 0 0 0 .036.541l1.32 1.266c.143.14.361.125.484-.033l6.272-8.048a.366.366 0 0 0-.064-.512zm-4.1 0l-.478-.372a.365.365 0 0 0-.51.063L4.566 9.879a.32.32 0 0 1-.484.033L1.891 7.769a.366.366 0 0 0-.515.006l-.423.433a.364.364 0 0 0 .006.514l3.258 3.185c.143.14.361.125.484-.033l6.272-8.048a.365.365 0 0 0-.063-.51z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Extra Details: Platform Badges & Calendar Actions -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 gap-4">
+            <!-- Launch Platforms Card -->
+            <div class="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="text-[11px] font-mono uppercase tracking-wider text-vice-cyan block">Launch Platforms</span>
+                    <h4 class="text-sm sm:text-base font-bold text-white">Console Release Hardware</h4>
+                </div>
+                <div class="flex items-center gap-2.5">
+                    <!-- PlayStation 5 Badge -->
+                    <div class="px-3.5 py-2 rounded-xl bg-blue-950/60 border border-blue-400/40 flex items-center gap-2 text-xs font-bold text-blue-100 shadow-sm">
+                        <svg class="w-4 h-4 text-blue-400 fill-current" viewBox="0 0 24 24">
+                            <path d="M8.985 2.596v17.548l3.915 1.261V6.688c0-.69.304-1.151.794-.991.636.181.76.814.76 1.505v5.876c2.441 1.193 4.362-.002 4.362-3.153 0-3.237-1.126-4.672-4.438-5.827-1.307-.448-3.728-1.186-5.393-1.502zm4.656 16.242l6.296-2.275c.715-.258.826-.625.247-.818-.586-.192-1.637-.139-2.357.123l-4.186 1.476v-2.345l.24-.085s1.201-.42 2.913-.612c1.712-.192 3.805.03 5.437.661 1.848.587 2.059 1.452.636 2.049-1.422.597-6.854 2.454-6.854 2.454l-2.372-.628zM1.832 18.08c-1.928-.545-2.262-1.678-.681-2.32 1.459-.596 4.593-1.609 4.593-1.609v2.409l-2.999 1.078c-.699.256-.803.629-.223.819.588.191 1.649.15 2.349-.115l.873-.319v2.138c-.553.095-1.181.148-1.809.128-1.224-.032-2.103-.209-2.103-.209z"/>
+                        </svg>
+                        <span>PS5</span>
+                    </div>
+
+                    <!-- Xbox Series X|S Badge -->
+                    <div class="px-3.5 py-2 rounded-xl bg-emerald-950/60 border border-emerald-400/40 flex items-center gap-2 text-xs font-bold text-emerald-100 shadow-sm">
+                        <svg class="w-4 h-4 text-emerald-400 fill-current" viewBox="0 0 24 24">
+                            <path d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12c0-4.124-2.08-7.764-5.252-9.924-1.541-.443-2.618.921-3.486 4.551zm-6.531 0C7.865 2.996 6.787 1.633 5.252 2.076 2.08 4.236 0 7.876 0 12c0 2.861.998 5.48 2.661 7.539-1.406-2.599 3.579-9.951 6.07-12.912zM12 3.735c1.755-1.814 3.749-2.466 4.675-2.299C15.221.522 13.668 0 12 0c-1.668 0-3.221.522-4.675 1.436.926-.167 2.92.485 4.675 2.299z"/>
+                        </svg>
+                        <span>Xbox Series X|S</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add to Calendar Card -->
+            <div class="glass-panel rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                    <span class="text-[11px] font-mono uppercase tracking-wider text-vice-pink block">Never Miss Launch Night</span>
+                    <h4 class="text-sm sm:text-base font-bold text-white">Save Nov 19, 2026 to Calendar</h4>
+                </div>
+                <div class="flex items-center gap-2">
+                    <button onclick="openGoogleCalendar()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold text-white flex items-center gap-1.5 transition-all">
+                        <svg class="w-4 h-4 text-vice-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                        <span>Google Cal</span>
+                    </button>
+                    <button onclick="downloadICSFile()" class="px-3.5 py-2 rounded-xl bg-vice-pink/20 hover:bg-vice-pink/35 border border-vice-pink/50 text-xs font-semibold text-pink-100 flex items-center gap-1.5 transition-all">
+                        <svg class="w-4 h-4 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                        <span>.ICS File</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="relative z-10 w-full text-center py-4 px-4 text-xs text-pink-200/50 font-mono">
+        <span>FAN-MADE REALTIME COUNTDOWN • GRAND THEFT AUTO VI RELEASES NOVEMBER 19, 2026</span>
+    </footer>
+
+    <!-- Toast Notification for Clipboard & Calendar Actions -->
+    <div id="toastNotification" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 pointer-events-none opacity-0 translate-y-4 transition-all duration-300">
+        <div class="bg-[#160829]/95 border-2 border-vice-cyan text-white px-5 py-3 rounded-2xl shadow-[0_0_30px_rgba(0,245,212,0.4)] flex items-center gap-3 backdrop-blur-md">
+            <span class="w-6 h-6 rounded-full bg-vice-cyan/20 text-vice-cyan flex items-center justify-center font-bold">✓</span>
+            <span id="toastMessage" class="text-xs sm:text-sm font-semibold">Copied live countdown message & link!</span>
+        </div>
+    </div>
+
+    <script>
+        // --- STATE & CONFIGURATION ---
+        // Trailer 1 release timestamp: Dec 4, 2023 23:00 UTC (used for overall wait progress bar)
+        const TRAILER_1_TIMESTAMP = new Date('2023-12-04T23:00:00Z').getTime();
+
+        let selectedTimezone = 'LOCAL'; // 'LOCAL', 'GMT', 'EST', 'PST'
+        let selectedShareTemplate = 'hype'; // 'hype', 'pto', 'minimal'
+        let lastSecond = -1;
+
+        // Current live breakdown values for instant sharing
+        let currentBreakdown = {
+            days: 0,
+            hours: 0,
+            minutes: 0,
+            seconds: 0,
+            totalSeconds: 0,
+            isReleased: false
+        };
+
+        // --- TIMEZONE TARGET CALCULATION ---
+        function getTargetTimestamp() {
+            switch (selectedTimezone) {
+                case 'GMT':
+                    // Midnight GMT / Dublin on Nov 19, 2026
+                    return new Date('2026-11-19T00:00:00Z').getTime();
+                case 'EST':
+                    // Midnight EST (New York / Miami / Leonida) on Nov 19, 2026 (UTC-5)
+                    return new Date('2026-11-19T00:00:00-05:00').getTime();
+                case 'PST':
+                    // Midnight PST (Los Angeles) on Nov 19, 2026 (UTC-8)
+                    return new Date('2026-11-19T00:00:00-08:00').getTime();
+                case 'LOCAL':
+                default:
+                    // Midnight in the user's local browser timezone on Nov 19, 2026
+                    return new Date(2026, 10, 19, 0, 0, 0, 0).getTime();
+            }
+        }
+
+        function setTimezone(tz) {
+            selectedTimezone = tz;
+
+            // Update button active styles
+            const tzButtons = ['LOCAL', 'GMT', 'EST', 'PST'];
+            tzButtons.forEach(code => {
+                const btn = document.getElementById(`tz-${code}`);
+                if (code === tz) {
+                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md";
+                } else {
+                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all";
+                }
+            });
+
+            // Update descriptive subtext
+            const subtextEl = document.getElementById('activeTimezoneSubtext');
+            const labels = {
+                'LOCAL': 'Counting down to: Thursday, Nov 19, 2026 at 00:00:00 (Your Local Midnight)',
+                'GMT': 'Counting down to: Thursday, Nov 19, 2026 at 00:00:00 GMT (Dublin / London)',
+                'EST': 'Counting down to: Thursday, Nov 19, 2026 at 00:00:00 EST (Miami / New York)',
+                'PST': 'Counting down to: Thursday, Nov 19, 2026 at 00:00:00 PST (Los Angeles)'
+            };
+            subtextEl.textContent = labels[tz];
+
+            updateCountdown();
+            updateLiveWhatsAppPreview();
+            playTickBeep(660, 0.04);
+        }
+
+        // --- REAL-TIME COUNTDOWN LOOP ---
+        function updateCountdown() {
+            const now = Date.now();
+            const target = getTargetTimestamp();
+            const diff = target - now;
+
+            const daysEl = document.getElementById('days');
+            const hoursEl = document.getElementById('hours');
+            const minutesEl = document.getElementById('minutes');
+            const secondsEl = document.getElementById('seconds');
+            const msEl = document.getElementById('milliseconds');
+
+            if (diff <= 0) {
+                currentBreakdown = { days: 0, hours: 0, minutes: 0, seconds: 0, totalSeconds: 0, isReleased: true };
+                daysEl.textContent = '00';
+                hoursEl.textContent = '00';
+                minutesEl.textContent = '00';
+                secondsEl.textContent = '00';
+                msEl.textContent = '.00';
+                document.getElementById('progressPercentage').textContent = '100.00000%';
+                document.getElementById('progressBar').style.width = '100%';
+                document.getElementById('exactSecondsRemaining').textContent = 'OUT NOW IN LEONIDA!';
+                return;
+            }
+
+            currentBreakdown.isReleased = false;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / 1000 / 60) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            const centiseconds = Math.floor((diff % 1000) / 10);
+
+            currentBreakdown.days = days;
+            currentBreakdown.hours = hours;
+            currentBreakdown.minutes = minutes;
+            currentBreakdown.seconds = seconds;
+            currentBreakdown.totalSeconds = Math.floor(diff / 1000);
+
+            daysEl.textContent = String(days).padStart(2, '0');
+            hoursEl.textContent = String(hours).padStart(2, '0');
+            minutesEl.textContent = String(minutes).padStart(2, '0');
+            secondsEl.textContent = String(seconds).padStart(2, '0');
+            msEl.textContent = '.' + String(centiseconds).padStart(2, '0');
+
+            // Sub-metrics
+            const weeksLeft = (diff / (1000 * 60 * 60 * 24 * 7)).toFixed(1);
+            const totalHoursLeft = Math.floor(diff / (1000 * 60 * 60)).toLocaleString();
+            const totalMinutesLeft = Math.floor(diff / (1000 * 60)).toLocaleString();
+
+            document.getElementById('weeksSub').textContent = `${weeksLeft} weeks`;
+            document.getElementById('totalHoursSub').textContent = `${totalHoursLeft} total hrs`;
+            document.getElementById('totalMinutesSub').textContent = `${totalMinutesLeft} total mins`;
+            document.getElementById('exactSecondsRemaining').textContent = `${currentBreakdown.totalSeconds.toLocaleString()} SECONDS LEFT`;
+
+            // Progress bar calculation from Trailer 1 to Launch
+            const totalWaitDuration = target - TRAILER_1_TIMESTAMP;
+            const elapsedWait = now - TRAILER_1_TIMESTAMP;
+            const percentage = Math.min(100, Math.max(0, (elapsedWait / totalWaitDuration) * 100));
+
+            document.getElementById('progressPercentage').textContent = percentage.toFixed(5) + '%';
+            document.getElementById('progressBar').style.width = percentage.toFixed(3) + '%';
+
+            // Trigger once-per-second effects (WhatsApp live preview update + subtle tick)
+            if (seconds !== lastSecond) {
+                lastSecond = seconds;
+                secondsEl.classList.remove('digit-pulse');
+                void secondsEl.offsetWidth; // trigger reflow
+                secondsEl.classList.add('digit-pulse');
+                updateLiveWhatsAppPreview();
+                if (synthEnabled) {
+                    playTickBeep(seconds === 0 ? 880 : 440, 0.025);
+                }
+            }
+        }
+
+        // --- WHATSAPP SHARE & MESSAGE BUILDER ---
+        function setShareTemplate(tpl) {
+            selectedShareTemplate = tpl;
+            const templates = ['hype', 'pto', 'minimal'];
+            templates.forEach(t => {
+                const btn = document.getElementById(`tpl-${t}`);
+                if (t === tpl) {
+                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all";
+                } else {
+                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all";
+                }
+            });
+            updateLiveWhatsAppPreview();
+        }
+
+        function toggleCustomUrlInput() {
+            const box = document.getElementById('customUrlBox');
+            box.classList.toggle('hidden');
+        }
+
+        function getShareUrl() {
+            const customInput = document.getElementById('customShareUrl').value.trim();
+            if (customInput) return customInput;
+            return window.location.href;
+        }
+
+        function buildWhatsAppMessage() {
+            const url = getShareUrl();
+            const { days, hours, minutes, seconds, isReleased } = currentBreakdown;
+
+            if (isReleased) {
+                return `🌴🚨 *GTA VI IS OFFICIALLY OUT NOW!* 🚨🌴\nSee you in Vice City!\n\n👉 ${url}`;
+            }
+
+            if (selectedShareTemplate === 'pto') {
+                return `🌴 *PSA: Book your PTO for GTA VI!* 🎮\n\nOnly *${days} Days, ${hours} Hours, ${minutes} Mins, and ${seconds} Secs* left until *Grand Theft Auto VI* drops at Midnight on *November 19, 2026*! ⏳🔥\n\nWatch the live countdown here:\n👉 ${url}`;
+            } else if (selectedShareTemplate === 'minimal') {
+                return `⏳ *GTA VI Live Countdown:* ${days}d ${hours}h ${minutes}m ${seconds}s remaining until Nov 19, 2026! 🌴🎮\n👉 ${url}`;
+            } else {
+                // Default 'hype' template
+                return `🌴🔥 *GTA VI LIVE COUNTDOWN* 🔥🌴\n\nWe are officially *${days} Days, ${hours} Hours, ${minutes} Minutes & ${seconds} Seconds* away from returning to Vice City on *November 19, 2026*! 🚨🎮\n\nTap to watch the real-time timer:\n👉 ${url}`;
+            }
+        }
+
+        function updateLiveWhatsAppPreview() {
+            const previewEl = document.getElementById('whatsappPreviewText');
+            if (previewEl) {
+                previewEl.textContent = buildWhatsAppMessage();
+            }
+            const now = new Date();
+            const timeStr = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
+            const previewTimeEl = document.getElementById('previewTime');
+            if (previewTimeEl) {
+                previewTimeEl.textContent = timeStr;
+            }
+        }
+
+        function shareOnWhatsApp() {
+            const message = buildWhatsAppMessage();
+            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        function copyShareMessage() {
+            const message = buildWhatsAppMessage();
+            const textArea = document.createElement('textarea');
+            textArea.value = message;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-9999px';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+
+            try {
+                document.execCommand('copy');
+                showToast('Copied live GTA VI countdown & link for WhatsApp!');
+            } catch (err) {
+                showToast('Could not copy automatically — please select the preview text.');
+            }
+            document.body.removeChild(textArea);
+        }
+
+        // --- CALENDAR EXPORT (.ICS & GOOGLE CALENDAR) ---
+        function openGoogleCalendar() {
+            const title = encodeURIComponent('🎮 Grand Theft Auto VI — Official Launch Night');
+            const details = encodeURIComponent('Return to Vice City and explore Leonida! Grand Theft Auto VI releases at Midnight on November 19, 2026.');
+            const location = encodeURIComponent('Vice City, Leonida (PS5 / Xbox Series X|S)');
+            const dates = '20261119T000000/20261119T040000';
+            const gcalUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${dates}&details=${details}&location=${location}`;
+            window.open(gcalUrl, '_blank', 'noopener,noreferrer');
+        }
+
+        function downloadICSFile() {
+            const icsContent = [
+                'BEGIN:VCALENDAR',
+                'VERSION:2.0',
+                'PRODID:-//GTA VI Countdown//Leonida//EN',
+                'BEGIN:VEVENT',
+                'UID:gta6-launch-20261119@vicecity.local',
+                'DTSTAMP:20260101T000000Z',
+                'DTSTART:20261119T000000',
+                'DTEND:20261119T040000',
+                'SUMMARY:🎮 Grand Theft Auto VI — Official Midnight Release',
+                'DESCRIPTION:Welcome to Leonida! Grand Theft Auto VI launches today at Midnight (November 19, 2026).',
+                'LOCATION:Vice City, Leonida',
+                'END:VEVENT',
+                'END:VCALENDAR'
+            ].join('\r\n');
+
+            const blob = new Blob([icsContent], { type: 'text/calendar;charset=utf-8' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.setAttribute('download', 'GTA-VI-Release-Nov-19-2026.ics');
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+            showToast('Downloaded GTA VI Launch Calendar (.ics) file!');
+        }
+
+        // --- TOAST NOTIFICATION ---
+        let toastTimeout;
+        function showToast(msg) {
+            const toast = document.getElementById('toastNotification');
+            const toastMsg = document.getElementById('toastMessage');
+            toastMsg.textContent = msg;
+            toast.classList.remove('opacity-0', 'translate-y-4');
+            toast.classList.add('opacity-100', 'translate-y-0');
+
+            clearTimeout(toastTimeout);
+            toastTimeout = setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-4');
+            }, 3200);
+        }
+
+        // --- WEB AUDIO SYNTHWAVE TICK & CHIME ---
+        let audioCtx = null;
+        let synthEnabled = false;
+
+        function toggleSynthDrone() {
+            if (!audioCtx) {
+                const AudioContext = window.AudioContext || window.webkitAudioContext;
+                audioCtx = new AudioContext();
+            }
+            if (audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            synthEnabled = !synthEnabled;
+            const iconOff = document.getElementById('audioIconOff');
+            const iconOn = document.getElementById('audioIconOn');
+            const label = document.getElementById('audioLabel');
+
+            if (synthEnabled) {
+                iconOff.classList.add('hidden');
+                iconOn.classList.remove('hidden');
+                label.textContent = 'Synth SFX: ON';
+                playViceChord();
+                showToast('Vice City Synth Audio Effects Enabled 🌴');
+            } else {
+                iconOff.classList.remove('hidden');
+                iconOn.classList.add('hidden');
+                label.textContent = 'Synth SFX: OFF';
+            }
+        }
+
+        function playTickBeep(freq = 440, duration = 0.03) {
+            if (!audioCtx || !synthEnabled) return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                // Ignore audio errors if blocked
+            }
+        }
+
+        function playViceChord() {
+            if (!audioCtx) return;
+            const freqs = [220, 277.18, 329.63, 415.30]; // A Major 7th synthwave chord
+            freqs.forEach((f, idx) => {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'sawtooth';
+                osc.frequency.setValueAtTime(f, audioCtx.currentTime + idx * 0.04);
+                gain.gain.setValueAtTime(0.03, audioCtx.currentTime + idx * 0.04);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.9);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(audioCtx.currentTime + idx * 0.04);
+                osc.stop(audioCtx.currentTime + 0.95);
+            });
+        }
+
+        // --- INITIALIZATION ---
+        window.onload = function () {
+            updateCountdown();
+            updateLiveWhatsAppPreview();
+            // Run at ~30fps so centiseconds and progress bar animate smoothly
+            setInterval(updateCountdown, 33);
+        };
+    </script>
+</body>
+</html>

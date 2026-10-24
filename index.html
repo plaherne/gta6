@@ -178,6 +178,20 @@
             border: 1px solid rgba(255, 255, 255, 0.12);
         }
 
+        /* Synth SFX Toggle Button Styling (.sfx-btn & .sfx-btn.active) */
+        .sfx-btn {
+            background: rgba(20, 7, 38, 0.78);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: rgba(251, 207, 232, 0.8);
+        }
+
+        .sfx-btn.active {
+            background: linear-gradient(135deg, rgba(255, 42, 133, 0.28) 0%, rgba(0, 245, 212, 0.22) 100%);
+            border-color: #00f5d4;
+            color: #ffffff;
+            box-shadow: 0 0 18px rgba(0, 245, 212, 0.35), inset 0 0 8px rgba(255, 42, 133, 0.25);
+        }
+
         /* Shimmering Progress Bar */
         .progress-bar-fill {
             background: linear-gradient(90deg, #ff7b00 0%, #ff2a85 50%, #00f5d4 100%);
@@ -284,20 +298,13 @@
         </div>
 
         <div class="flex items-center gap-2 sm:gap-3">
-            <!-- Synth Audio Vibe Button -->
-            <button id="audioToggleBtn" onclick="toggleSynthDrone()" class="glass-panel hover:border-vice-pink/60 text-xs font-mono px-3 py-1.5 rounded-full flex items-center gap-2 transition-all text-pink-200 hover:text-white">
-                <svg id="audioIconOff" class="w-4 h-4 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2" />
-                </svg>
-                <svg id="audioIconOn" class="w-4 h-4 text-vice-cyan hidden animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z" />
-                </svg>
-                <span id="audioLabel">Synth SFX: OFF</span>
+            <!-- Synth SFX Toggle Button (Toggled ON by Default) -->
+            <button id="sfxToggle" onclick="toggleSynthSfx()" class="sfx-btn active text-xs font-mono px-3.5 py-1.5 rounded-full flex items-center gap-2 transition-all cursor-pointer" aria-pressed="true">
+                🔊 Synth SFX - ON
             </button>
 
             <!-- Quick Copy Link Pill -->
-            <button onclick="copyShareMessage()" class="glass-panel hover:border-vice-cyan/60 text-xs font-mono px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all text-cyan-200 hover:text-white">
+            <button onclick="copyShareMessage()" class="glass-panel hover:border-vice-cyan/60 text-xs font-mono px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-all text-cyan-200 hover:text-white cursor-pointer">
                 <svg class="w-3.5 h-3.5 text-vice-cyan" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                 </svg>
@@ -335,16 +342,16 @@
         <!-- Timezone Selector Bar -->
         <div class="w-full max-w-2xl mb-6">
             <div class="glass-panel p-1.5 rounded-2xl flex flex-wrap items-center justify-center gap-1 sm:gap-1.5 shadow-xl">
-                <button onclick="setTimezone('LOCAL')" id="tz-LOCAL" class="tz-btn flex-1 min-w-[115px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md">
+                <button onclick="setTimezone('LOCAL')" id="tz-LOCAL" class="tz-btn flex-1 min-w-[115px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md cursor-pointer">
                     📍 Local Midnight
                 </button>
-                <button onclick="setTimezone('GMT')" id="tz-GMT" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                <button onclick="setTimezone('GMT')" id="tz-GMT" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all cursor-pointer">
                     🇮🇪🇬🇧 GMT / Dublin
                 </button>
-                <button onclick="setTimezone('EST')" id="tz-EST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                <button onclick="setTimezone('EST')" id="tz-EST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all cursor-pointer">
                     🌴 EST / Miami
                 </button>
-                <button onclick="setTimezone('PST')" id="tz-PST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all">
+                <button onclick="setTimezone('PST')" id="tz-PST" class="tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all cursor-pointer">
                     🎬 PST / L.A.
                 </button>
             </div>
@@ -440,7 +447,7 @@
 
             <!-- Sub-bar: Smooth Second Pulse Bar -->
             <div class="mt-2.5 flex items-center justify-between text-[11px] font-mono text-pink-200/70">
-                <span>DEC 5, 2023 (TRAILER 1)</span>
+                <span>DEC 4, 2023 (TRAILER 1)</span>
                 <span id="exactSecondsRemaining" class="text-vice-gold font-semibold">0,000,000 SECONDS LEFT</span>
                 <span>NOV 19, 2026 (LAUNCH)</span>
             </div>
@@ -467,13 +474,13 @@
                     <!-- Preset Vibe Selector -->
                     <div class="flex flex-wrap items-center gap-1.5">
                         <span class="text-xs font-mono text-pink-200/70 mr-1">Message Style:</span>
-                        <button onclick="setShareTemplate('hype')" id="tpl-hype" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all">
+                        <button onclick="setShareTemplate('hype')" id="tpl-hype" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all cursor-pointer">
                             🔥 Squad Hype
                         </button>
-                        <button onclick="setShareTemplate('pto')" id="tpl-pto" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all">
+                        <button onclick="setShareTemplate('pto')" id="tpl-pto" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all cursor-pointer">
                             📅 Book PTO Alert
                         </button>
-                        <button onclick="setShareTemplate('minimal')" id="tpl-minimal" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all">
+                        <button onclick="setShareTemplate('minimal')" id="tpl-minimal" class="tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all cursor-pointer">
                             ⚡ Clean & Short
                         </button>
                     </div>
@@ -507,12 +514,12 @@
                         <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
                         Live WhatsApp Message Preview
                     </span>
-                    <button onclick="toggleCustomUrlInput()" class="text-[11px] font-mono text-vice-cyan hover:underline">
+                    <button onclick="toggleCustomUrlInput()" class="text-[11px] font-mono text-vice-cyan hover:underline cursor-pointer">
                         Customize Share Link URL
                     </button>
                 </div>
 
-                <!-- Optional Custom Link Input (if user wants to paste a custom hosted URL) -->
+                <!-- Optional Custom Link Input -->
                 <div id="customUrlBox" class="hidden mb-3">
                     <label class="block text-xs text-pink-200/80 mb-1">Custom URL to include in WhatsApp message (defaults to current page link):</label>
                     <input type="url" id="customShareUrl" placeholder="https://your-custom-link.com" oninput="updateLiveWhatsAppPreview()" class="w-full bg-black/50 border border-vice-pink/40 rounded-xl px-3 py-2 text-xs font-mono text-white focus:outline-none focus:border-vice-cyan">
@@ -566,13 +573,13 @@
                     <h4 class="text-sm sm:text-base font-bold text-white">Save Nov 19, 2026 to Calendar</h4>
                 </div>
                 <div class="flex items-center gap-2">
-                    <button onclick="openGoogleCalendar()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold text-white flex items-center gap-1.5 transition-all">
+                    <button onclick="openGoogleCalendar()" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-white/20 border border-white/20 text-xs font-semibold text-white flex items-center gap-1.5 transition-all cursor-pointer">
                         <svg class="w-4 h-4 text-vice-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                         </svg>
                         <span>Google Cal</span>
                     </button>
-                    <button onclick="downloadICSFile()" class="px-3.5 py-2 rounded-xl bg-vice-pink/20 hover:bg-vice-pink/35 border border-vice-pink/50 text-xs font-semibold text-pink-100 flex items-center gap-1.5 transition-all">
+                    <button onclick="downloadICSFile()" class="px-3.5 py-2 rounded-xl bg-vice-pink/20 hover:bg-vice-pink/35 border border-vice-pink/50 text-xs font-semibold text-pink-100 flex items-center gap-1.5 transition-all cursor-pointer">
                         <svg class="w-4 h-4 text-vice-pink" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                         </svg>
@@ -599,6 +606,11 @@
 
     <script>
         // --- STATE & CONFIGURATION ---
+        // Synth SFX is ON by default
+        let sfxEnabled = true;
+        let audioCtx = null;
+        let audioUnlocked = false;
+
         // Trailer 1 release timestamp: Dec 4, 2023 23:00 UTC (used for overall wait progress bar)
         const TRAILER_1_TIMESTAMP = new Date('2023-12-04T23:00:00Z').getTime();
 
@@ -615,6 +627,110 @@
             totalSeconds: 0,
             isReleased: false
         };
+
+        // --- WEB AUDIO API FIRST-INTERACTION UNLOCKER & SYNTH ENGINE ---
+        function unlockAudioOnFirstInteraction(event) {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+
+            if (!audioUnlocked) {
+                audioUnlocked = true;
+                // If user's first click wasn't turning off the SFX toggle, play a welcome synth chord
+                const clickedToggle = event && event.target && event.target.closest('#sfxToggle');
+                if (sfxEnabled && !clickedToggle) {
+                    playViceChord();
+                }
+            }
+        }
+
+        // Automatically wake up the synth engine on the very first tap, click, or keypress
+        ['click', 'touchstart', 'keydown'].forEach(evt => {
+            window.addEventListener(evt, unlockAudioOnFirstInteraction, { once: true });
+        });
+
+        function updateSfxButtonUI() {
+            const btn = document.getElementById('sfxToggle');
+            if (!btn) return;
+
+            if (sfxEnabled) {
+                btn.classList.add('active');
+                btn.setAttribute('aria-pressed', 'true');
+                btn.textContent = '🔊 Synth SFX - ON';
+            } else {
+                btn.classList.remove('active');
+                btn.setAttribute('aria-pressed', 'false');
+                btn.textContent = '🔇 Synth SFX - OFF';
+            }
+        }
+
+        function toggleSynthSfx() {
+            if (!audioCtx) {
+                const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+                if (AudioContextClass) {
+                    audioCtx = new AudioContextClass();
+                }
+            }
+            if (audioCtx && audioCtx.state === 'suspended') {
+                audioCtx.resume();
+            }
+            audioUnlocked = true;
+
+            sfxEnabled = !sfxEnabled;
+            updateSfxButtonUI();
+
+            if (sfxEnabled) {
+                playViceChord();
+                showToast('Vice City Synth Audio Effects: ON 🌴');
+            } else {
+                showToast('Vice City Synth Audio Effects: OFF 🔇');
+            }
+        }
+
+        function playTickBeep(freq = 440, duration = 0.03) {
+            if (!sfxEnabled || !audioCtx || audioCtx.state !== 'running') return;
+            try {
+                const osc = audioCtx.createOscillator();
+                const gain = audioCtx.createGain();
+                osc.type = 'triangle';
+                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
+                gain.gain.setValueAtTime(0.035, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start();
+                osc.stop(audioCtx.currentTime + duration);
+            } catch (e) {
+                // Ignore audio errors if browser blocks playback prior to interaction
+            }
+        }
+
+        function playViceChord() {
+            if (!sfxEnabled || !audioCtx) return;
+            try {
+                const freqs = [220, 277.18, 329.63, 415.30]; // A Major 7th 80s synthwave arpeggio
+                freqs.forEach((f, idx) => {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(f, audioCtx.currentTime + idx * 0.045);
+                    gain.gain.setValueAtTime(0.03, audioCtx.currentTime + idx * 0.045);
+                    gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.85);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start(audioCtx.currentTime + idx * 0.045);
+                    osc.stop(audioCtx.currentTime + 0.9);
+                });
+            } catch (e) {
+                // Ignore if audio context not yet unlocked
+            }
+        }
 
         // --- TIMEZONE TARGET CALCULATION ---
         function getTargetTimestamp() {
@@ -643,9 +759,9 @@
             tzButtons.forEach(code => {
                 const btn = document.getElementById(`tz-${code}`);
                 if (code === tz) {
-                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md";
+                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-semibold transition-all bg-gradient-to-r from-vice-pink to-vice-orange text-white shadow-md cursor-pointer";
                 } else {
-                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all";
+                    btn.className = "tz-btn flex-1 min-w-[105px] py-2 px-3 rounded-xl text-xs sm:text-sm font-medium text-pink-100/80 hover:text-white hover:bg-white/5 transition-all cursor-pointer";
                 }
             });
 
@@ -661,7 +777,7 @@
 
             updateCountdown();
             updateLiveWhatsAppPreview();
-            playTickBeep(660, 0.04);
+            playTickBeep(660, 0.05);
         }
 
         // --- REAL-TIME COUNTDOWN LOOP ---
@@ -726,14 +842,14 @@
             document.getElementById('progressPercentage').textContent = percentage.toFixed(5) + '%';
             document.getElementById('progressBar').style.width = percentage.toFixed(3) + '%';
 
-            // Trigger once-per-second effects (WhatsApp live preview update + subtle tick)
+            // Trigger once-per-second effects (WhatsApp live preview update + subtle synth tick)
             if (seconds !== lastSecond) {
                 lastSecond = seconds;
                 secondsEl.classList.remove('digit-pulse');
                 void secondsEl.offsetWidth; // trigger reflow
                 secondsEl.classList.add('digit-pulse');
                 updateLiveWhatsAppPreview();
-                if (synthEnabled) {
+                if (sfxEnabled) {
                     playTickBeep(seconds === 0 ? 880 : 440, 0.025);
                 }
             }
@@ -746,12 +862,13 @@
             templates.forEach(t => {
                 const btn = document.getElementById(`tpl-${t}`);
                 if (t === tpl) {
-                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all";
+                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-vice-pink text-white font-medium transition-all cursor-pointer";
                 } else {
-                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all";
+                    btn.className = "tpl-btn text-xs px-2.5 py-1 rounded-lg bg-white/10 text-pink-100 hover:bg-white/20 font-medium transition-all cursor-pointer";
                 }
             });
             updateLiveWhatsAppPreview();
+            playTickBeep(587.33, 0.04);
         }
 
         function toggleCustomUrlInput() {
@@ -797,12 +914,14 @@
         }
 
         function shareOnWhatsApp() {
+            playViceChord();
             const message = buildWhatsAppMessage();
-            const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(message)}`;
+            const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
         }
 
         function copyShareMessage() {
+            playTickBeep(783.99, 0.05);
             const message = buildWhatsAppMessage();
             const textArea = document.createElement('textarea');
             textArea.value = message;
@@ -823,6 +942,7 @@
 
         // --- CALENDAR EXPORT (.ICS & GOOGLE CALENDAR) ---
         function openGoogleCalendar() {
+            playTickBeep(659.25, 0.05);
             const title = encodeURIComponent('🎮 Grand Theft Auto VI — Official Launch Night');
             const details = encodeURIComponent('Return to Vice City and explore Leonida! Grand Theft Auto VI releases at Midnight on November 19, 2026.');
             const location = encodeURIComponent('Vice City, Leonida (PS5 / Xbox Series X|S)');
@@ -832,6 +952,7 @@
         }
 
         function downloadICSFile() {
+            playTickBeep(659.25, 0.05);
             const icsContent = [
                 'BEGIN:VCALENDAR',
                 'VERSION:2.0',
@@ -874,74 +995,9 @@
             }, 3200);
         }
 
-        // --- WEB AUDIO SYNTHWAVE TICK & CHIME ---
-        let audioCtx = null;
-        let synthEnabled = false;
-
-        function toggleSynthDrone() {
-            if (!audioCtx) {
-                const AudioContext = window.AudioContext || window.webkitAudioContext;
-                audioCtx = new AudioContext();
-            }
-            if (audioCtx.state === 'suspended') {
-                audioCtx.resume();
-            }
-
-            synthEnabled = !synthEnabled;
-            const iconOff = document.getElementById('audioIconOff');
-            const iconOn = document.getElementById('audioIconOn');
-            const label = document.getElementById('audioLabel');
-
-            if (synthEnabled) {
-                iconOff.classList.add('hidden');
-                iconOn.classList.remove('hidden');
-                label.textContent = 'Synth SFX: ON';
-                playViceChord();
-                showToast('Vice City Synth Audio Effects Enabled 🌴');
-            } else {
-                iconOff.classList.remove('hidden');
-                iconOn.classList.add('hidden');
-                label.textContent = 'Synth SFX: OFF';
-            }
-        }
-
-        function playTickBeep(freq = 440, duration = 0.03) {
-            if (!audioCtx || !synthEnabled) return;
-            try {
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-                osc.type = 'triangle';
-                osc.frequency.setValueAtTime(freq, audioCtx.currentTime);
-                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
-                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + duration);
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-                osc.start();
-                osc.stop(audioCtx.currentTime + duration);
-            } catch (e) {
-                // Ignore audio errors if blocked
-            }
-        }
-
-        function playViceChord() {
-            if (!audioCtx) return;
-            const freqs = [220, 277.18, 329.63, 415.30]; // A Major 7th synthwave chord
-            freqs.forEach((f, idx) => {
-                const osc = audioCtx.createOscillator();
-                const gain = audioCtx.createGain();
-                osc.type = 'sawtooth';
-                osc.frequency.setValueAtTime(f, audioCtx.currentTime + idx * 0.04);
-                gain.gain.setValueAtTime(0.03, audioCtx.currentTime + idx * 0.04);
-                gain.gain.exponentialRampToValueAtTime(0.0001, audioCtx.currentTime + 0.9);
-                osc.connect(gain);
-                gain.connect(audioCtx.destination);
-                osc.start(audioCtx.currentTime + idx * 0.04);
-                osc.stop(audioCtx.currentTime + 0.95);
-            });
-        }
-
         // --- INITIALIZATION ---
         window.onload = function () {
+            updateSfxButtonUI();
             updateCountdown();
             updateLiveWhatsAppPreview();
             // Run at ~30fps so centiseconds and progress bar animate smoothly
